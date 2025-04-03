@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suvira.com/sitemap.xml
