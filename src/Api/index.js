@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Host
 // export const Host = "https://api.suvira.com";
-export const Host = "http://localhost:8001";
+export const Host = "https://api.suvira.com";
 
 //Api Routes
 export const SEND_OTP = `${Host}/api/v1/sendOtp`;

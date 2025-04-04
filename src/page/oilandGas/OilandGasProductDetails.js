@@ -355,7 +355,7 @@ function OilandGasProductDetails() {
             <BenefitsField label="Benefits :" benefits={getBenefits()} />
 
             {renderRightSideFields(customFields)}
-            {pdf}
+            
           </div>
         </div>
         <div className="h-[1px] w-[90%] bg-black "></div>

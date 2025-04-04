@@ -53,7 +53,7 @@ function WorldMapComponent() {
                   strokeWidth={0.2}
                   style={{
                     default: { outline: "none" },
-                    hover: { outline: "none", fill: "#3d3e41" },
+                    //hover: { outline: "none", fill: "#3d3e41" },
                     pressed: { outline: "none" },
                   }}
                 />

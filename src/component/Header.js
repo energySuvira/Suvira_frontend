@@ -88,7 +88,7 @@ const Header = () => {
     {
       id: 3,
       title: "Offering",
-      href: "/offerings/oilandgas",
+      href: "",
     },
     {
       id: 4,
@@ -129,7 +129,7 @@ const Header = () => {
               (item, index) => {
                 const formattedPath =
                   item === "Offerings"
-                    ? `/offerings/oilandgas`
+                    ? ``
                     : `/${item.toLowerCase().replace(" ", "")}`;
 
                 const isActive = location.pathname === formattedPath;
@@ -242,7 +242,7 @@ const Header = () => {
               className="offerings-menu bg-[#10100FA6] flex flex-col items-start gap-2 absolute left-[28%] top-[70%] py-3 px-4"
               ref={offeringsMenuRef}
             >
-               {sectors.map((items,i)=>(
+               {sectors?.map((items,i)=>(
               <div className="slide-hover-left-1 flex gap-2 pr-3 items-center justify-center">
                 <div className="w-[4px] h-[16px] bg-[#81BC06]"></div>
                 <>

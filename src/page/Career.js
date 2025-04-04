@@ -34,6 +34,7 @@ const Career = () => {
   const Openings = useRecoilValue(JobPostings);
   const [firstName, setfirstName] = useState(null);
   const [latName, setlatName] = useState(null);
+  const [fullName, setFullName] = useState(null);
   const [number, setnumber] = useState(null);
   const [email, setemail] = useState(null);
   const [dob, setdob] = useState(null);
@@ -49,10 +50,20 @@ const Career = () => {
   const [resume, setresume] = useState(null);
   const [loading, setLoading] = useState(false);
   const [jobPostingMenu, setJobPostingMenu] = useState(false);
-  const [jobid, setjobid] = useState(undefined);
+  const [jobid, setjobid] = useState("664eca3ba7a498c7635bb0a9");
   const [showAddBanner, setShowAddBanner] = useState(false);
   const [newBanner, setNewBanner] = useState("");
   const [fileName, setFileName] = useState("");
+
+  const handlePdfChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type === "application/pdf") {
+      setresume(file);
+    } else {
+      alert("Please upload a valid PDF file.");
+      e.target.value = "";
+    }
+  };
 
   const handleExploreClick = () => {
     if (targetDivRef.current) {
@@ -60,31 +71,24 @@ const Career = () => {
     }
   };
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
     if (
-      firstName &&
+      fullName &&
       jobid &&
-      latName &&
       number &&
       email &&
-      dob &&
-      gender &&
       address &&
-      zipCode &&
       education &&
       experience &&
-      field &&
-      role &&
-      currentCtc &&
-      expectedCtc &&
       resume
     ) {
       let link1 = resume;
 
-      // If editLogo is not a string, upload the new logo
       if (typeof resume !== "string") {
         try {
           const formData = new FormData();
@@ -106,44 +110,35 @@ const Career = () => {
         }
       }
 
-      // Proceed with updating the service
       try {
         const { data } = await axios.post(JOB_APPLICATION, {
-          jobId: jobid,
-          firstName: firstName,
-          lastName: latName,
+          jobId: "664eca3ba7a498c7635bb0a9",
+          fullName: fullName,
+
           contactNumber: number,
           email: email,
-          DOB: dob,
-          gender: gender,
+
           address: address,
-          zipCode: zipCode,
+
           education: education,
           experience: experience,
-          field: field,
-          role: role,
-          currentCTC: currentCtc,
-          expectedCTC: expectedCtc,
+
           resume: link1,
         });
 
         if (data.success) {
-          setfirstName("");
-          setlatName("");
+          setFullName("");
+
           setnumber("");
           setemail("");
-          setdob("");
-          setgender("");
+
           setaddress("");
-          setzipCode("");
+
           seteducation("");
           setexperience("");
-          setfield("");
-          setrole("");
-          setcurrentCtc("");
-          setexpectedCtc("");
+
           setresume("");
-          setJobPostingMenu("");
+
           setjobid(undefined);
           toast.success(data.message);
         } else {
@@ -330,7 +325,7 @@ const Career = () => {
         <div className=" w-full mb-10">
           <Accordion />
         </div>
-        <div className=" w-full relative bg-[#F8F8F8] md:h-[320px] h-[500px] flex justify-center overflow-hidden ">
+        {/* <div className=" w-full relative bg-[#F8F8F8] md:h-[320px] h-[500px] flex justify-center overflow-hidden ">
           <div className=" xl:w-[80%] w-[95%]  relative z-20 flex md:flex-row flex-col ">
             <div
               className=" relative bg-no-repeat xl:w-[500px] lg:w-[400px] w-[300px] h-full bg-center z-20 bg-cover "
@@ -360,18 +355,20 @@ const Career = () => {
           <div className=" absolute bg-[#05A6F0] w-6 h-28 left-6 top-0"></div>
           <div className=" bg-[#81BC06] size-12 rounded-full absolute left-16 top-0"></div>
           <div className=" bg-[#81BC06] size-[300px] rounded-full absolute -right-12 -top-16"></div>
-        </div>
+        </div> */}
 
         <div className=" w-full flex flex-col items-center justify-center mt-10 mb-10">
           <h3 className=" text-4xl font-medium text-center">
             Discover Your Path
           </h3>
-          <form className=" w-[80%] flex flex-col gap-4 mt-7">
+          <form className=" w-[80%] flex flex-col gap-4 mt-7" onSubmit={handleSubmit}>
             <div className=" w-full flex gap-8 flex-col sm:flex-row">
               <div className=" flex flex-col gap-2 w-full ">
                 <label className=" text-xl font-normal">Name </label>
                 <input
                   type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
                   className=" w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter name"
                 />
@@ -380,6 +377,8 @@ const Career = () => {
                 <label className=" text-xl font-normal">Email ID. </label>
                 <input
                   type="text"
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
                   className="w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter Email ID."
                 />
@@ -390,6 +389,8 @@ const Career = () => {
                 <label className=" text-xl font-normal">Contact No </label>
                 <input
                   type="text"
+                  value={number}
+                  onChange={(e) => setnumber(e.target.value)}
                   className=" w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter Contact No "
                 />
@@ -398,6 +399,8 @@ const Career = () => {
                 <label className=" text-xl font-normal">Address</label>
                 <input
                   type="text"
+                  value={address}
+                  onChange={(e) => setaddress(e.target.value)}
                   className="w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter Address"
                 />
@@ -408,6 +411,8 @@ const Career = () => {
                 <label className=" text-xl font-normal">Education </label>
                 <input
                   type="text"
+                  value={education}
+                  onChange={(e) => seteducation(e.target.value)}
                   className=" w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter Education"
                 />
@@ -416,28 +421,34 @@ const Career = () => {
                 <label className=" text-xl font-normal">Experience</label>
                 <input
                   type="text"
+                  value={experience}
+                  onChange={(e) => setexperience(e.target.value)}
                   className="w-full  bg-[#05A6F01A] border-[#05A6F0] border outline-none h-10 pl-5 rounded-2xl"
                   placeholder="Enter Experience"
                 />
               </div>
             </div>
-            <div className=" w-full flex gap-8">
-              <div className=" flex flex-col gap-2 w-full ">
-                <label className=" text-xl font-normal ">Upload Resume</label>
-
-                <div className="relative justify-center flex items-center bg-[#05A6F01A] border border-[#05A6F0] rounded-2xl h-10 pl-5 cursor-pointer">
-                  <RiUpload2Fill className="mr-2 text-[#878787] text-[20px]" />
-                  <span className="text-[#878787] sm:text-[20px] text-base ">
-                    {fileName || "UPLOAD YOUR RESUME"}
-                  </span>
-                  <input
-                    type="file"
-                    className="absolute inset-0 opacity-0 cursor-pointer"
-                    accept=".pdf,.doc,.docx"
-                    onChange={handleFileChange}
-                  />
+            <div className="mb-4  p-2 border border-[#05A6F0] rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9]">
+              <label
+                htmlFor="pdf"
+                className="flex items-center justify-center gap-5 cursor-pointer h-full"
+              >
+                <LuUpload className="text-2xl text-[#10100f]" />
+                Upload Resume
+              </label>
+              <input
+                type="file"
+                id="pdf"
+                name="pdf"
+                accept="application/pdf"
+                onChange={handlePdfChange}
+                className="hidden h-full"
+              />
+              {resume && (
+                <div className="mt-2 text-sm text-gray-600">
+                  Uploaded File: {resume.name}
                 </div>
-              </div>
+              )}
             </div>
             <div className=" w-full grid place-items-center mt-4">
             <ReadMoreBtn text={"Submit"} />

@@ -78,7 +78,7 @@ import bannerVideo from './image/bannerVide.mp4';
 import aboutusImg from './image/aboutusMissionVision.png';
 import OilEngiWithLap from './image/oilengineerWithlap.jpg';
 import personWorking from './image/person-working-building-construction.jpg';
-import personWalkingDownStears from './image/person-working-building.jpg';
+import personWalkingDownStears from './image/pipes.png';
 import yearsAbout from './image/aboutyears.png';
 import newsBanner from './image/newsBanner.jpg';
 import waterSvg from './icon/waterSvg.svg';

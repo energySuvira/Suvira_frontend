@@ -56,7 +56,7 @@ const AboutUs = () => {
     offset: ["start end", "end start"],
     smooth: 500,
   });
-  const yearimageMove = useTransform(yearScrollYProgress, [0, 1], [-150, 20]);
+  const yearimageMove = useTransform(yearScrollYProgress, [0, 1], [-30, 20]);
 
   // 
 
@@ -239,7 +239,7 @@ const AboutUs = () => {
           <div className="flex flex-col md:items-center md:flex-row lg:gap-9 gap-8 items-center justify-center w-full">
             <motion.div
               ref={aboutYearsRef}
-              className="flex-grow lg:flex-none xl:h-[600px] lg:h-[500px] sm:h-[400px] h-[250px] lg:w-[40vw] md:w-[40vw] w-[90%] rounded-xl bg-cover bg-no-repeat bg-right-bottom"
+              className="flex-grow lg:flex-none  xl:h-[600px] lg:h-[500px] sm:h-[400px] h-[250px] lg:w-[40vw] md:w-[40vw] w-[90%] rounded-xl bg-cover bg-no-repeat bg-right-bottom"
               style={{
                 backgroundImage: `url(${icons.personWalkingDownStears})`,
                 backgroundPositionX: yearimageMove,

@@ -437,6 +437,7 @@ td {
 
 .catCard {
   background: #d8d8d8;
+  background-position: center;
  
   display: block;
   background-size: cover;

@@ -233,7 +233,7 @@ const Home = () => {
         <SlideShow Slides={Slides} />
         <div className="w-full flex items-center justify-center font-[Poppins] relative">
           <div className="lg:px-5 px-1 absolute w-full lg:w-[95vw] flex flex-col md:flex-row justify-between items-end lg:bottom-[10rem] bottom-[2.5rem]">
-            <div className=" text-white text-xl  lg:text-2xl xl:text-4xl flex text-left items-start font-bold  w-[95vw] md:w-[70vw] text-wrap">
+            <div className=" text-white text-xl  lg:text-2xl xl:text-4xl flex text-left items-start font-bold  w-[95vw] md:w-[100vw] text-wrap">
               Suvira Energy:
               <TypeWriter />
             </div>

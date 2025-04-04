@@ -444,7 +444,7 @@ function AddOfferingSector({
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {sectors.map((card, index) => (
+                {sectors?.map((card, index) => (
                   <tr key={card._id}>
                     <td className="px-6 py-4 whitespace-nowrap">{card.name}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
