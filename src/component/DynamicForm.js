@@ -76,21 +76,21 @@ function DynamicForm({ fields, setFields }) {
         </button>
       </div>
       <form className="space-y-1 ">
-        {fields.map((field, index) => (
+        {fields?.map((field, index) => (
           <div
             key={field.id}
             ref={index === fields.length - 1 ? lastFieldRef : null}
-            className="flex  p-3 rounded items-center justify-between "
+            className="flex  p-3 rounded items-center justify-between flex-col md:flex-row gap-3 md:gap-0 "
           >
             <input
               type="text"
               value={field.label}
               onChange={(e) => updateField(field.id, "label", e.target.value)}
-              className=" p-2 border border-[#05A6F0]  rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9] "
+              className=" p-2 border border-[#05A6F0]  rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9] w-[100%] md:w-[40%] "
               placeholder="Edit Label"
             />
 
-            <select
+            {/* <select
               value={field.type}
               onChange={(e) => updateField(field.id, "type", e.target.value)}
               className="  p-2 border border-[#05A6F0]  rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9]"
@@ -103,7 +103,7 @@ function DynamicForm({ fields, setFields }) {
               <option value="textarea">Textarea</option>
               <option value="file">File</option>
               <option value="select">Select</option>
-            </select>
+            </select> */}
 
             {field.type === "textarea" ? (
               <textarea
@@ -162,7 +162,7 @@ function DynamicForm({ fields, setFields }) {
                 value={field.value}
                 onChange={(e) => updateField(field.id, "value", e.target.value)}
                 placeholder={field.label}
-                className="  p-2 border border-[#05A6F0]  rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9]"
+                className="  p-2 border border-[#05A6F0]  rounded-3xl bg-[#05A6F01A] focus:outline-none focus:ring-1 focus:ring-[#0c8ce9] w-[100%] md:w-[50%]"
               />
             )}
 

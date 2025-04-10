@@ -146,7 +146,7 @@ function OilAndGas() {
               <PageMainTitle
                 greenColorText={currentSector?.name?.split(" ")[0] || "Oil &"}
                 blackColorText={
-                  currentSector?.name?.split(" ").slice(1).join(" ") || " Gas"
+                  currentSector?.name?.split(" ").slice(1).join(" ") || ""
                 }
               />
             </div>

@@ -20,6 +20,7 @@ import SlideShow from "../component/SlideShow";
 import TypeWriter from "../component/TypeWriter";
 import WorldMapComponent from "../component/WorldMapComponent";
 import { serviceCard as initialCards } from "../mockData/chemicalsData";
+
 import {
   Blogs,
   clientClicked,
@@ -33,6 +34,7 @@ import {
   testimonalClicked,
   userInfo,
 } from "../Recoil";
+import SectorDisplay from "../component/SectorDisplay";
 
 // sectors
 
@@ -391,7 +393,7 @@ const Home = () => {
           </div>
         </div> */}
         <div className=" w-full flex items-center justify-center ">
-          <div className=" lg:w-[70%] md:w-[80%] w-[95%]">
+          <div className=" lg:w-[93%] md:w-[80%] w-[95%]">
             <div
               ref={scrollContainerRef}
               className="w-full flex flex-row items-center flex-nowrap justify-start overflow-x-scroll overflow-y-hidden gap-4 mt-6 scroll-smooth"
@@ -460,7 +462,7 @@ const Home = () => {
           blackColorText={"Product Range"}
         />
 
-        <div className="flex  items-center w-full">
+        {/* <div className="flex  items-center w-full">
           <div className="flex items-center gap-7 mb-10 md:gap-20 xl:gap-[8rem] flex-col-reverse w-full lg:flex-row-reverse">
             <div className=" flex  lg:ml-[-4.5rem]  md:w-[45%] w-[80%] h-[500px] lg:h-[715px]">
               <motion.div
@@ -511,7 +513,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <SectorDisplay sectors={sectors}/>
       </div>
 
       {/* <div className="bg-white hidden">

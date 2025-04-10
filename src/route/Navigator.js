@@ -202,7 +202,7 @@ const Navigator = () => {
               </motion.div>
             }
           />
-          <Route
+          {/* <Route
             path="/offerings/chemicals/:pageId/:id"
             element={
               <motion.div
@@ -215,7 +215,8 @@ const Navigator = () => {
                 <ChemicalFullProductPage />
               </motion.div>
             }
-          />
+              \
+          /> */}
             {/* <Route
             path="/offerings/renewable/:pageId/:id"
             element={
@@ -231,7 +232,7 @@ const Navigator = () => {
             }
           /> */}
 
-          <Route
+          {/* <Route
             path="/offerings/chemicals/:id"
             element={
               <motion.div
@@ -244,8 +245,8 @@ const Navigator = () => {
                 <ChemicalProducts />
               </motion.div>
             }
-          />
-           <Route
+          /> */}
+           {/* <Route
             path="/offerings/renwable/:id"
             element={
               <motion.div
@@ -259,7 +260,7 @@ const Navigator = () => {
               </motion.div>
             }
           />
-         
+          */}
 
           <Route
             path="/offerings/oilandgas/:pageId/:id"

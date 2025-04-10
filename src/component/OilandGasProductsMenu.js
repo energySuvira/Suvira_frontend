@@ -110,10 +110,7 @@ const [newFieldValue, setNewFieldValue] = useState('');
       const handleEdit = async () => {
         setLoading(true);
         try {
-          if (!editName || !editDescription) {
-            toast.error("All fields are required");
-            return;
-          }
+          
       
           let logoUrl = editLogo;
           let pdfUrl = editPdf;
@@ -537,7 +534,7 @@ const [newFieldValue, setNewFieldValue] = useState('');
         </div>
       </div>
       {showAddBox && (
-        <div className="p-7 bg-white w-[95%] lg:w-[50%] fixed rounded-md">
+        <div className="p-7 bg-white w-[95%] lg:w-[50%] h-[600px] overflow-y-auto fixed rounded-md">
           <div className="absolute right-1 top-1">
             <IoIosCloseCircle
               onClick={() => {
@@ -658,7 +655,7 @@ const [newFieldValue, setNewFieldValue] = useState('');
       {/* Edit model */}
 
       {isEditMode && (
-        <div className="p-7 bg-white w-[95%] lg:w-[50%] fixed rounded-md">
+        <div className="p-7 bg-white w-[95%] lg:w-[50%] h-[600px] overflow-y-auto fixed rounded-md">
           <div className="absolute right-1 top-1">
             <IoIosCloseCircle
               onClick={() =>{ setIsEditMode(false);

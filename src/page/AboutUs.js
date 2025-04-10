@@ -34,7 +34,7 @@ const AboutUs = () => {
     { num: 100, metricTitle: "Satisfied Clients" },
     { num: 300, metricTitle: "Products" },
     { num: 4.8, metricTitle: "Client Rating" },
-    { num: 30, metricTitle: "Branch Offices" },
+    { num: 3, metricTitle: "Branch Offices" },
   ];
   const aboutref = useRef(null);
 
