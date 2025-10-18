@@ -48,8 +48,8 @@ const Contact = () => {
         setLoading(false);
         toast.error(
           error?.response?.data?.message ||
-            error?.data?.message ||
-            error.message
+          error?.data?.message ||
+          error.message
         );
       }
     } else {
@@ -119,17 +119,16 @@ const Contact = () => {
                 Corporate Office :
               </div>
               <p className=" text-lg text-black">
-                B-201, Suvira Energy, Satellite Gazebo, B. D. Sawant Marg,
-                Andheri East, Mumbai, Maharashtra 400099
+                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099
               </p>
             </div>
             <div className=" text-left">
               <div className=" flex gap-4 items-center  text-2xl mb-3">
                 <RiMapPinLine size={20} />
-               Lab :
+                Lab :
               </div>
               <p className=" text-lg text-black capitalize">
-             B 1 2 3 GROUND FLOOR HANUMANTA APPARTMENT SRA CHS LTD M C CHHAGLA MARG CHAKALA ANDHERI Maharashtra
+                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099
               </p>
             </div>
 
@@ -139,7 +138,7 @@ const Contact = () => {
                 Production and Warehouse address:
               </div>
               <p className=" text-lg text-black">
-              Bommasandra Industrial Area, Bommasandra, Bengaluru, Karnataka
+                Bommasandra Industrial Area, Bommasandra, Bengaluru, Karnataka
               </p>
             </div>
             <div className=" text-left">
