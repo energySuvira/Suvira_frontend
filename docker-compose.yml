@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  suvira-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    restart: unless-stopped
+    container_name: suvira-frontend
