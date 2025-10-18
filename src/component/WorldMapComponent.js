@@ -100,16 +100,13 @@ function WorldMapComponent() {
                   }}
                 >
                   {name === "Mumbai"
-                    ? "B-201, Suvira Energy, Satellite Gazebo, B. D. Sawant Marg, Andheri East, Mumbai, Maharashtra 400099"
+                    ? "B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099"
                     : name === "Andheri East"
                     ? <>
-                        <tspan x="-145" dy="-1em">lab: B 1 2 3 GROUND FLOOR</tspan>
-                        <tspan x="-145" dy="1.2em">HANUMANTA APPARTMENT SRA CHS LTD</tspan>
-                        <tspan x="-145" dy="1.2em">M C CHHAGLA MARG CHAKALA ANDHERI</tspan>
-                        <tspan x="-145" dy="1.2em">Maharashtra</tspan>
+                        <tspan x="-145" dy="-1em">lab: B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheris(East), Mumbai-400099, Maharashtra </tspan>
                       </>
                     : name === "Bommasandra"
-                    ? "Bommasandra Industrial Area, Bommasandra, Bengaluru, Karnataka"
+                    ? "Bommasandra Industrial Area, Bommasandra, Bengaluru, Karnataka" 
                     : ""}
                 </text>
               </g>
