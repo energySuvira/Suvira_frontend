@@ -100,7 +100,7 @@ function WorldMapComponent() {
                   }}
                 >
                   {name === "Mumbai"
-                    ? "B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099"
+                    ? "B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra."
                     : name === "Andheri East"
                     ? <>
                         <tspan x="-145" dy="-1em">lab: B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheris(East), Mumbai-400099, Maharashtra </tspan>

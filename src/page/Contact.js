@@ -119,7 +119,7 @@ const Contact = () => {
                 Corporate Office :
               </div>
               <p className=" text-lg text-black">
-                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099
+                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra.
               </p>
             </div>
             <div className=" text-left">
@@ -128,7 +128,7 @@ const Contact = () => {
                 Lab :
               </div>
               <p className=" text-lg text-black capitalize">
-                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099
+                B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra.
               </p>
             </div>
 

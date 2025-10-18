@@ -28,7 +28,7 @@ const Footer = () => {
           <img src={icons.logo} className=" w-[150px] h-[90px] md:w-[200px] md:h-[115px] object-cover" alt="suvira logo" />
           <div className=" w-[90%] md:w-[70%] text-[1.2rem]">
             <span className="text-base md:text-lg font-semibold">
-            B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra 400099
+            B-1,2,3, Ground Floor, Hanumanta Apartment SRA CHS LTD., M C Chhagla Marg, Chakala, Andheri(East), Mumbai-400099, Maharashtra.
             </span>
             <span className="flex items-center justify-between mt-5 w-52">
               <a
